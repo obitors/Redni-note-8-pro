@@ -13,7 +13,11 @@ function printOutput(num){
 	}
 	else{
 		document.getElementById("output-text").innerText=getFormattedNumber(num);
+<<<<<<< HEAD
 	}
+=======
+	}
+>>>>>>> origin/master
 }
 function getFormattedNumber(num){
 	if(num=="-"){
@@ -63,7 +67,11 @@ for(var i =0;i<operator.length;i++){
 				}
 			}
 		}
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> origin/master
 	});
 }
 var number = document.getElementsByClassName("button");
