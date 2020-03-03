@@ -13,42 +13,50 @@ body {
     background: -webkit-linear-gradient(-45deg, rgba(46, 51, 58, 1) 0%, rgba(35, 39, 44, 1) 100%);
     position: relative;
     margin: auto;
+    margin-top: 0;
 }
 
-.textbox {
+#output-box {
     width: 90%;
     margin: 4.5%;
     height: 850px;
-    border-radius: 10px;
+    border-radius: 30px;
     background: #24292e;
     border-style: none;
     box-shadow: inset 5px 5px 4px #151515,
         inset -2px -2px 2px #505050;
     margin-top: 5%;
-    position: relative;
+    position: absolute;
 }
 
-.buttons .table-row {
+.buttons {
     width: 100%;
     margin: auto;
+    margin-top: 90%;
+    position: absolute;
 }
 
-.button {
+.button, .number {
+    float: left;
     width: 200px;
     height: 200px;
-    border-style: none;
+    line-height: 200%;
+    border: 1px;
     background: -webkit-linear-gradient(-45deg, rgba(46, 51, 58, 1) 0%, rgba(35, 39, 44, 1) 100%);
-    box-shadow: 5px 5px 15px #000000,
-        -5px -5px 5px #505050;
+    box-shadow: 2px 2px 3px #000000,
+        -2px -2px 2px #505050;
     border-radius: 10px;
     margin-left: 50px;
     font-size: 100px;
+    font-family: aileron;
     color: #fff;
     margin-top: 50px;
     text-align: center;
+    font-weight: 500;
+    position: relative
 }
 
-.button:active {
+.button:active, .number:active {
     width: 200px;
     height: 200px;
     border-style: none;
@@ -79,7 +87,23 @@ body {
 
 .textbox {
     text-align: right;
-    font-size: 25px;
-    color: fff;
+    font-size: 150px;
+    color: #fff;
     padding-right: 10px;
+}
+p {
+    font-family: aileron;
+    text-align: right;
+    font-size: 150px;
+    color: #fff;
+    padding-right: 20px;
+}
+
+.previous p  {
+
+    text-align: right;
+    font-size: 100px;
+    color: #cacaca;
+    padding-right: 20px;
+}
 }

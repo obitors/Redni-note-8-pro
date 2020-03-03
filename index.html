@@ -4,25 +4,31 @@
 <head>
     <title>Redifine MI Calculator</title>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
     <!-- Start your code here -->
 
     <div class="container">
-        <form name="calculator">
-            <input class="textbox" />
-        </form>
-        <table class="buttons">
-            <tr class="table-row">
-                <td><input class="button color-3" type="button" value="C"></td>
+        <div class="output-box" id="output-box">
+            <div class="previous" id="previous">
+                <p id="previous-value">4x5</p>
+            </div>
+            <div class="current" id="output">
+                <p id="current-value">20</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="table-row">
+                <button class="button color-3" type="button" value="C">C</div>
                 <td><input class="button color-2" type="button" value="B"></td>
                 <td><input class="button color-2" type="button" value="P"></td>
                 <td><input class="button color-2" type="button" value="/"></td>
-            </tr>
+            <div>
             <tr>
-                <td><input class="button" value="7"></td>
-                <td><input class="button"  value="8"></td>
+                <button class="number" id="7">7</button>
+                <td><input class="button"  value="8" onclick="enter(8)"></td>
                 <td><input class="button"  value="9"></td>
                 <td><input class="button color-2" value="*"></td>
             </tr>
@@ -47,7 +53,7 @@
         </table>
     </div>
     <!-- End your code here -->
-    <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 
 </html>
