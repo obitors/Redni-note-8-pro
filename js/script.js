@@ -1,18 +1,18 @@
 function getHistory(){
-	return document.getElementById("previous-value").innerText;
+	return document.getElementById("history-text").innerText;
 }
-function printHistory(numbers){
-	document.getElementById("previous-value").innerText=numbers;
+function printHistory(num){
+	document.getElementById("history-text").innerText=num;
 }
 function getOutput(){
-	return document.getElementById("current-value").innerText;
+	return document.getElementById("output-text").innerText;
 }
 function printOutput(num){
 	if(num==""){
-		document.getElementById("current-value").innerText=num;
+		document.getElementById("output-text").innerText=num;
 	}
 	else{
-		document.getElementById("current-value").innerText=getFormattedNumber(num);
+		document.getElementById("output-text").innerText=getFormattedNumber(num);
 	}
 }
 function getFormattedNumber(num){
@@ -26,14 +26,14 @@ function getFormattedNumber(num){
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
-var operator = document.getElementsByClassName("operator");
+var operator = document.getElementsByClassName("button-op");
 for(var i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){
 		if(this.id=="clear"){
 			printHistory("");
 			printOutput("");
 		}
-		else if(this.id=="backspace"){
+		else if(this.id=="back"){
 			var output=reverseNumberFormat(getOutput()).toString();
 			if(output){//if output has a value
 				output= output.substr(0,output.length-1);
@@ -66,7 +66,7 @@ for(var i =0;i<operator.length;i++){
 
 	});
 }
-var number = document.getElementsByClassName("number");
+var number = document.getElementsByClassName("button");
 for(var i =0;i<number.length;i++){
 	number[i].addEventListener('click',function(){
 		var output=reverseNumberFormat(getOutput());
